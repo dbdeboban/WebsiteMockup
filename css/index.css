@@ -1,67 +1,185 @@
 body {
-    font-family: 'Segoe UI';
+  font-family: "Segoe UI";
 }
 
 .logo-header {
-    padding-top: 7px;
-    padding-bottom: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 #logo-right {
-    float: right;
+  float: right;
 }
 
+.logo {
+  width: 200px;
+  height: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin-top: 8px;
+    margin-bottom: 8px; */
+}
 .search {
-    margin-left: 20px;
-    margin-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .searchBar {
-    margin-top: 20px;
-    padding: 10px;
-    border: 0px;
-    border-radius: 3px;
-    box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.10);
-    -moz-box-shadow: 0px 1.5px 1px 1px rgba(0, 0, 0, 0.10);
-    -webkit-box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.10);
+  margin-top: 20px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1.5px 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 1.5px 1px rgba(0, 0, 0, 0.1);
 }
 
 .searchBar input {
-    border: none !important;
+  border: none !important;
 }
 
 .searchBar input:focus {
-    outline: none!important;
-    border: none !important;
+  outline: none !important;
+  border: none !important;
 }
 
 .searchBar img {
-    width: 20px;
+  width: 20px;
 }
 
 #search-text {
-    width: 100%;
+  width: 100%;
 }
 
 .searchBar {
-    display: flex;
-    max-width: 50%;
+  display: flex;
+  max-width: 50%;
 }
 
 .searchFilter {
-    margin-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
 }
 
 #show {
-    font-weight: bold;
-    margin-right: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+/* The container */
+.container-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-right: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-#semantic {
-    background-color: rgba(0, 0, 0, 0);
+/* Hide the browser's default checkbox */
+.container-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+}
 .semantic {
-    background-color: rgb(255, 174, 0);
-    border: none !important;
+  background-color: #f3c221;
+}
+.keyword {
+  background-color: #63cc00;
+}
+.all {
+  background-color: #f35d21;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-check .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+hr {
+  background-color: rgb(146, 146, 146);
+}
+.searchResult {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.information {
+  border: 1px solid rgb(146, 146, 146);
+  padding: 15px;
+}
+.infoButton button {
+  border: none !important;
+  padding: 10px 20px 10px 20px;
+}
+.buttonSelect{
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+.matchType {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  margin-top: -4px;
+}
+.matchTypeButton {
+  padding: 10px 20px 10px 20px;
+  font-size: 13px;
+  margin: 0px;
+  color: #ffffff;
+  width: 121px;
+}
+.setting {
+  width: 20px;
+  height: 20px;
+  margin: 10px 15px 10px 15px;
+}
+.checked {
+  width: 15px;
+  margin-right: 10px;
+}
+.searchCard{
+    margin-bottom: 35px;
+}
+.searchCard h5{
+ margin-bottom: 0px;
+}
+.searchCard p{
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
